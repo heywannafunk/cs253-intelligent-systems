@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ACQUAINTANCE -->
+
+<aiml>
+  <category>
+    <pattern>_ меня зовут *</pattern>
+    <template>
+        <srai>меня зовут <star/></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>меня зовут *</pattern>
+    <template>
+      <random>
+        <li>Здравствуйте, <set name="user-name"><star /></set>!
+        </li>
+        <li>Добро пожаловать, <set name="user-name"><star /></set>!
+        </li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>кто ты</pattern>
+    <template>
+      <random>
+        <li>Я заготовка бота, <get name="user-name" /></li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>РАССКАЖИ О СЕБЕ</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Кря *</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>_ Кря *</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Кря</pattern>
+    <template>
+      <srai>Кря</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Кря</pattern>
+    <template>
+      <random>
+        <li>Кря</li>
+        <li>Кря Кря</li>
+        <li>Кря Кря Кря</li>
+        <li>Кря!</li>
+        <li>Кря Кря!</li>
+        <li>Кря Кря Кря!</li>
+        <li>Кря?</li>
+        <li>Кря Кря?</li>
+        <li>Кря Кря Кря?</li>
+        <li>Кря, <get name="user-name" /></li>
+        <li>Кря Кря, <get name="user-name" /> </li>
+        <li>Кря Кря Кря, <get name="user-name" /> </li>
+        <li>Кря, <get name="user-name" />!</li>
+        <li>Кря Кря, <get name="user-name" />!</li>
+        <li>Кря Кря Кря, <get name="user-name" />!</li>
+        <li>Кря, <get name="user-name" />?</li>
+        <li>Кря Кря, <get name="user-name" />?</li>
+        <li>Кря Кря Кря, <get name="user-name" />?</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Что ты умеешь</pattern>
+    <template>
+      Волшебное ничего
+    </template>
+  </category>
+
+  <!-- Знания бота -->
+
+  <category>
+    <pattern>Что ты знаешь</pattern>
+    <template>
+      Как выглядят эмблемы автопроизводителей
+    </template>
+  </category>
+
+  <category>
+    <pattern>Какие марки знаешь</pattern>
+    <template>
+      Я знаю 
+      Audi,
+      Honda,
+      Infiniti,
+      Lexus,
+      Mercedes-Benz,
+      Mitsubishi,
+      Opel,
+      Renault,
+      Suzuki
+    </template>
+  </category>
+
+  <category>
+    <pattern>факт *</pattern>
+    <template>
+      <srai>факт</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ факт *</pattern>
+    <template>
+      <srai>факт</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ факт</pattern>
+    <template>
+      <srai>факт</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>факт</pattern>
+    <template>
+      <srai><get name="topic" />fact</srai>
+    </template>
+  </category>
+
+  <!-- Знания бота: AUDI -->
+
+  <category>
+    <pattern>Audi *</pattern>
+    <template>
+      <srai>Audi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Audi *</pattern>
+    <template>
+      <srai>Audi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Audi</pattern>
+    <template>
+      <srai>Audi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Audi</pattern>
+    <template>
+      <set name="topic">Audi</set> - немецкая автомобилестроительная компания в составе концерна Volkswagen Group, специализирующаяся на выпуске автомобилей под маркой Audi
+    </template>
+  </category>
+
+  <category>
+    <pattern>Audifact</pattern>
+    <template>
+      В 1909 году была организована компания <set name="topic">Audi</set> Automobil-Werke, что переводится как «Автомобильный завод Ауди», а в 1910 г. был выпущен первый автомобиль.
+    </template>
+  </category>
+
+  <!-- Знания бота: HONDA -->
+
+  <category>
+    <pattern>Honda *</pattern>
+    <template>
+      <srai>Honda</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Honda *</pattern>
+    <template>
+      <srai>Honda</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Honda</pattern>
+    <template>
+      <srai>Honda</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Honda</pattern>
+    <template>
+      <set name="topic">Honda</set> - японская публичная многонациональная корпорация, основанная в 1948 году изобретателем и предпринимателем Соитиро Хондой и финансистом Такэо Фудзисавой, известная прежде всего как производитель автомобилей
+    </template>
+  </category>
+
+  <category>
+    <pattern>Hondafact</pattern>
+    <template>
+      <set name="topic">Honda</set> - восьмой величине производитель автомобилей в мире
+    </template>
+  </category>
+
+  <!-- Знания бота: INFINITI -->
+
+  <category>
+    <pattern>Infiniti *</pattern>
+    <template>
+      <srai>Infiniti</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Infiniti *</pattern>
+    <template>
+      <srai>Infiniti</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Infiniti</pattern>
+    <template>
+      <srai>Infiniti</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Infiniti</pattern>
+    <template>
+      <set name="topic">Infiniti</set> - японский автопроизводитель, принадлежащий японской компании Nissan Motor. Автомобили Infiniti официально продаются в США, Канаде, Мексике, странах Ближнего Востока, Республике Корее и Тайване, а с 2006 года в России, Казахстане и Украине.
+    </template>
+  </category>
+
+  <category>
+    <pattern>Infinitifact</pattern>
+    <template>
+      Весь модельный ряд Infiniti создан на базе существующих моделей Nissan. В настоящее время большинство выпускаемых седанов, купе и кроссоверов построено на одной платформе — Nissan FM.
+    </template>
+  </category>
+
+  <!-- Знания бота: LEXUS -->
+
+  <category>
+    <pattern>Lexus *</pattern>
+    <template>
+      <srai>Lexus</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Lexus *</pattern>
+    <template>
+      <srai>Lexus</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Lexus</pattern>
+    <template>
+      <srai>Lexus</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Lexus</pattern>
+    <template>
+      <set name="topic">Lexus</set> - марка премиальных автомобилей, производимых японской корпорацией Toyota Motor. Автомобили бренда продаются более чем в 90 странах мира. Lexus присутствует на российском рынке с 2002 года
+    </template>
+  </category>
+
+  <category>
+    <pattern>Lexusfact</pattern>
+    <template>
+      Первый автомобиль Lexus — Lexus LS — стал первым автомобилем в мире, оснащённым подушкой безопасности на руле в сочетании с регулировкой рулевой колонки по вылету и углу наклона
+    </template>
+  </category>
+
+  <!-- Знания бота: Mercedes-Benz -->
+
+  <category>
+    <pattern>Mercedes *</pattern>
+    <template>
+      <srai>Mercedes</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Mercedes *</pattern>
+    <template>
+      <srai>Mercedes</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Mercedes</pattern>
+    <template>
+      <srai>Mercedes</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Mercedes</pattern>
+    <template>
+      <set name="topic">Mercedes</set> - торговая марка и одноимённая компания — производитель легковых автомобилей премиального класса, грузовых автомобилей, автобусов и других транспортных средств, входящая в состав немецкого концерна «Daimler AG»
+    </template>
+  </category>
+
+  <category>
+    <pattern>Mercedesfact</pattern>
+    <template>
+      История марки Mercedes-Benz слагается из историй двух известных немецких автомобильных компаний — Benz 8 Cie. (основана Карлом Бенцем в 1883 году) и Daimler-Motoren-Gesellschaft (основана Готлибом Даймлером в 1890 году). Обе компании развивались самостоятельно до 1926 года, когда они объединились в единый концерн Daimler-Benz, впоследствии переименованный в Daimler AG.
+    </template>
+  </category>
+
+  <!-- Знания бота: Mitsubishi -->
+
+  <category>
+    <pattern>Mitsubishi *</pattern>
+    <template>
+      <srai>Mitsubishi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Mitsubishi *</pattern>
+    <template>
+      <srai>Mitsubishi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Mitsubishi</pattern>
+    <template>
+      <srai>Mitsubishi</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Mitsubishi</pattern>
+    <template>
+      <set name="topic">Mitsubishi</set> - японская автомобилестроительная компания, входит в группу Mitsubishi — являющейся самой большой производственной группой Японии. Штаб-квартира — в Токио
+    </template>
+  </category>
+
+  <category>
+    <pattern>Mitsubishifact</pattern>
+    <template>
+      Логотип компании сделан из герба провинции Тоса (три листа дуба) и герба клана основателя компании (три ромба друг на друге)
+    </template>
+  </category>
+
+  <!-- Знания бота: Opel -->
+
+  <category>
+    <pattern>Opel *</pattern>
+    <template>
+      <srai>Opel</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Opel *</pattern>
+    <template>
+      <srai>Opel</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Opel</pattern>
+    <template>
+      <srai>Opel</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Opel</pattern>
+    <template>
+      <set name="topic">Opel</set> - немецкий производитель автомобилей, штаб-квартира расположена в Рюссельсхайме (Германия). Компания была основана 21 января 1862 года; к выпуску автомобилей приступили в 1899 году
+    </template>
+  </category>
+
+  <category>
+    <pattern>Opelfact</pattern>
+    <template>
+      Летом 2021 года компания презентовала электрокар, который на одном заряде может проехать 75 километров. Зарядить электрический квадрицикл Rocks-e можно от любой розетки за 3,5 часа. В Германии за руль этого авто можно садиться с 15 лет при наличии мопедных прав категории AM
+    </template>
+  </category>
+
+  <!-- Знания бота: Renault -->
+
+  <category>
+    <pattern>Renault *</pattern>
+    <template>
+      <srai>Renault</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Renault *</pattern>
+    <template>
+      <srai>Renault</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Renault</pattern>
+    <template>
+      <srai>Renault</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Renault</pattern>
+    <template>
+      <set name="topic">Renault</set> - французская автомобилестроительная корпорация основана в 1899 г. Штаб-квартира компании расположена в городе Булонь-Бийанкуре, недалеко от Парижа
+    </template>
+  </category>
+
+  <category>
+    <pattern>Renaultfact</pattern>
+    <template>
+      Корпорация Renault была основана 25 февраля 1899 года как Société Renault Frères Луи Рено и его братьями Марселем и Фернаном
+    </template>
+  </category>
+
+  <!-- Знания бота: Suzuki -->
+
+  <category>
+    <pattern>Suzuki *</pattern>
+    <template>
+      <srai>Suzuki</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Suzuki *</pattern>
+    <template>
+      <srai>Suzuki</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ Suzuki</pattern>
+    <template>
+      <srai>Suzuki</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Suzuki</pattern>
+    <template>
+      <set name="topic">Suzuki</set> - японская машиностроительная компания. Штаб-квартира — в городе Хамамацу, префектура Сидзуока
+    </template>
+  </category>
+
+  <category>
+    <pattern>Suzukifact</pattern>
+    <template>
+      Компания начала свою деятельность с выпуска ткацких станков, мотовелосипедов и мотоциклов, была основана как Suzuki Loom Works. В 1930-х годах в Японии резко поднялся спрос на автомобили, и в 1937 году сотрудники Митио Судзуки начали реализацию проекта создания малолитражных автомобилей
+    </template>
+  </category>
+
+  <!-- Вспоминаем о чём говорим --> 
+  
+  <category>
+    <pattern>О какой марке речь</pattern>
+    <template>
+      О марке <get name="topic" />
+    </template>
+  </category>
+
+  <!-- Остальное -->
+
+  <category>
+    <pattern>Аудио</pattern>
+    <template>Жаль, я не умею слушать</template>
+  </category>
+  
+  <category>
+    <pattern>Видео</pattern>
+    <template>Спасибо, но, кажется, у меня сломалась кнопка запуска</template>
+  </category>
+  
+  <category>
+    <pattern>*</pattern>
+    <template>Я такое не знаю, <get name="user-name"/></template>
+  </category>
+</aiml>
